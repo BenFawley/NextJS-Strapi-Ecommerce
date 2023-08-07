@@ -16,7 +16,8 @@
       "type": "string"
     },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "name"
     },
     "description": {
       "type": "richtext"
@@ -46,15 +47,6 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "products"
-    },
-    "attributes": {
-      "type": "json"
-    },
-    "variations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variation.variation",
-      "mappedBy": "product"
     }
   }
 }
