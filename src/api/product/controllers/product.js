@@ -53,7 +53,10 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
       )
     );
 
+    let sortOrder = 0;
+
     const records = variations.map((variation) => {
+      sortOrder++;
       let name = variation.reduce(
         (acc, current) => acc + " " + Object.values(current)[0],
         product.name
@@ -79,6 +82,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
         price: product.price,
         description: product.description,
         size: size,
+        sortOrder:sortOrder,
       };
     });
     try {
