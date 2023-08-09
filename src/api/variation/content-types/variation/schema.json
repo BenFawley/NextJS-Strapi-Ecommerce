@@ -44,6 +44,9 @@
     },
     "size": {
       "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer"
     }
   }
 }
